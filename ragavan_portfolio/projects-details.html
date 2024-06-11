@@ -1,0 +1,31 @@
+<!-- project-details.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details</title>
+  <style>
+    /* Add your styles here */
+  </style>
+</head>
+<body>
+  <div class="top-header">
+    <h1 id="project-title">Project Title</h1>
+  </div>
+  <div class="project-content">
+    <p id="project-description">Project Description</p>
+  </div>
+  <script>
+    // Extract the project data from the URL parameters and display it
+    window.onload = function() {
+      const params = new URLSearchParams(window.location.search);
+      const title = params.get('title');
+      const description = params.get('description');
+
+      document.getElementById('project-title').textContent = title;
+      document.getElementById('project-description').innerHTML = description;
+    }
+  </script>
+</body>
+</html>
